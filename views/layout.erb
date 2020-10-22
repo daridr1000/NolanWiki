@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charser="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="This is my new Wiki app"/>
+  <meta name="keywords" content="wiki, test app, blog"/>
+  <link rel="stylesheet" href="/style1.css" type="text/css"/>
+  <link rel="icon" href="/icon.png">
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+   <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+  <title>NolanWiki</title>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="header">
+      <img id="back" src="/banner.png">
+      <img id="front" src="/NolanWiki.png">
+      <div class="navbar">
+        <ul class="menu_items">
+          <li class="menu_item"><a href="/">Home</a></li>
+          <li class="menu_item"><a href="/about">About</a></li>
+          <li class="menu_item"><a href="/movies">Movies</a></li> 
+          <li class="menu_item"><a href="/register">Register</a></li>
+          <% if $credentials %> 
+            <% if $credentials[0] != '' %> 						 
+              <li class="menu_item">Logged in as <a href="/user/<%= $credentials[0] %>"><b><%= $credentials[0] %></b></a></li> 
+              <% if $credentials[0] == "admin" %> 
+                <li class="menu_item"><a href="/admincontrols">Admin Controls</a></li>
+                <li class="menu_item"><a href="/edit">Edit</a></li>
+                <li class="menu_item"><a href="/createmovie">Create Movie</a></li>
+                <li class="menu_item"><a href="/logout">Logout</a> </li>
+                
+              <% else %>
+                <li class="menu_item"><a href="/logout">Logout</a></li>
+                <li class="menu_item"><a href="/createreview">Create Review</a></li>                                                 
+              <% end %> 
+            <% else %> 
+              <li class="menu_item"><a href="/login">Login</a> </li>
+            <% end %> 
+        <% else %> 
+          <li class="menu_item"><a href="/login">Login</a> </li>
+        <% end %>	
+      </ul>
+    </div>
+  </div>
+  <br>
+
+  <div class="sidenav">
+    <p>Number of words: <%= $words %></p>
+    <p>Characters: <%= $characters%></p>
+  </div>
+
+  <div class="view_content">
+    <%= yield%>
+  </div>
+
+  <footer>
+    <p>Copyright© 2019 Atanas Komsiyski ID:51985145 / Alexandra Nenkova ID:51984461 / Darius Dragnea ID:51984000 / Reece Tait ID:51982218 / Stanislav Stoyanov ID:51985020 </p>
+    <img src="/footer.png">
+  </footer>
+  </div>
+</body>
+</html>

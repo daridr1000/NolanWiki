@@ -1,0 +1,207 @@
+body{
+	font-family:Candara; 
+	background-image: linear-gradient(#080031, black);
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+div.grid{
+	display: grid;
+	grid-template-columns: 20% auto;
+	grid-template-rows: auto auto auto;
+	grid-gap: 10px;
+}
+
+div.header{
+	grid-column-start:1;
+	grid-column-end:3;
+	max-width: 100%;
+    overflow-x: hidden;
+	position:relative;
+}
+
+#back{
+	
+}
+
+#front{
+	position:absolute;
+	top:25%;
+	left:50%;
+	margin-left:-156px;
+	height:100px;
+}
+
+a {
+	text-decoration:none;
+}
+
+
+img.menu_border{
+	float:left;
+	padding:0;
+	margin:0;
+	height:20px;
+}
+
+div.navbar{
+	background-color:white;
+	background-image: url("film.png");	
+	background-size:contain;
+	float:left;
+	padding:6px;
+	width:100%;
+}
+
+ul.menu_items{
+	list-style-type: none;
+	padding:0;
+	margin:0;
+	width:;
+	float:left;
+	position:relative;
+	background-color:white;
+}
+
+li.menu_item{
+	border-left:3px solid black;
+	float:left;
+	position:relative;
+	padding:5px;
+}
+
+div.sidenav {
+	grid-row-start:2;
+	grid-row-end:3; 
+	border: 2px solid black;
+    background-color: rgba(211, 211, 211, 0.3);
+    overflow-x:hidden;
+	margin-left:2%;
+}
+
+div.sidenav p {
+    color:white;
+	padding:10px;
+}
+
+div.view_content{
+	grid-row-start:2;
+	grid-row-end:3;
+	margin-right:0.5%;
+	color:white;
+	padding:10px;
+	min-height:80vh;
+	border: 2px solid black;
+    background-color: rgba(211, 211, 211, 0.3);
+}
+
+table.table tr th:first-child {
+		width: 70px;
+	}
+
+table.table tr th:last-child {
+		width: 190px;
+	}
+
+table.table-striped.table-hover tbody tr{
+	background-color: rgba(211, 211, 211, 0.3);
+}
+
+
+
+table.table td a {
+		font-weight: bold;
+		color:white;
+		text-decoration: none;
+	}
+
+.table-wrapper {
+        background-image: linear-gradient(#080031, black);
+        padding: 20px 25px;
+        margin: auto;
+        width:90%;
+        float:center;
+    }
+.table-title {
+		padding-bottom: 15px;
+		color: #fff;
+		padding: 16px 30px;
+		margin: -20px -25px 10px;
+		border-radius: 3px 3px 0 0;
+    }
+
+
+
+ .table-title h2 {
+		margin: 5px 0 0;
+		font-size: 24px;
+		text-align: center;
+	}
+
+div.registerlogin,div.movies_page h2{
+	text-align: left;
+}
+
+
+ table.table tr th, table.table tr td {
+        border-color:#e9e9e9;;
+		padding: 12px 15px;
+		position: relative;
+    	float: center;
+    	width: 27%; 
+    	text-align: center;
+    }
+
+div.card {
+  box-shadow: 0 4px 8px 0 rgba(211, 211, 211, 0.3);
+  max-width: 100%;
+  margin: 10px 300px 20px;
+  text-align: right;
+  font-family: arial;
+  background-image: linear-gradient(#080031, black);
+}
+
+div.profile_user{
+	text-align: center;
+	max-width: 100%;
+	float:center;
+	
+}
+
+div.profile{
+	max-width:100%;
+	margin: 24px 0;
+	text-align:center;
+}
+
+
+div.image{
+	width: 100%;
+}
+
+div.image:hover {
+	transform: scale(1.03);
+	transition: all 300ms;
+}
+
+
+
+
+div.submit_movie{
+	text-align: right;
+	padding:20px 10px;
+}
+
+footer{
+	grid-column-start:1;
+	grid-column-end:3;
+	text-align:center;
+	margin:0px;
+	color:white;
+}
+
+footer img{
+	width: 100%;
+}

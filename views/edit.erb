@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+   
+  </head>
+	
+  <body>
+ <h2>Edit article</h2>
+    <form action="/edit" method="post" id="edit">
+      <input type="hidden" name="_method" value="put">
+      <textarea rows="20" cols="90" name="message"><%= @info %></textarea>
+      <script>
+        CKEDITOR.replace( "message" );
+      </script>
+      <input type="submit" value="Update">
+    </form>	
+    <p><a href="../reset" style="color:white;">Reset</a></p>
+  </body>	
+</html>

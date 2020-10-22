@@ -1,0 +1,26 @@
+
+<div class="profile_user">
+<h1>User</h1>
+</div>
+
+<div class="card">
+	<% if @Userz %>
+		<div class="image">
+	   		<img src="/user.png" width=100%>
+		</div>
+		<div class="profile">
+		<h2> <%= @Userz.username %></h2>
+		<h3>Created - <%= @Userz.created_at %></h3>
+		<h4>Last Updated - <%= @Userz.updated_at %></h4>
+		<h5>Edit Status - <%= @Userz.edit %></h5>
+	</div>
+</div>
+
+<h2>Reviews</h2>
+  <% if @Reviewz %>
+    <% @Reviewz.each do |review| %>
+      <h3><a href="/movies/<%= review.title %>"><%= review.title %></a></h3>
+      <p><%= review.content %></p><br><br>
+    <% end %>
+  <% end %>
+<% end %>
